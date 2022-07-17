@@ -7,92 +7,85 @@ function NavesSofka() {
   const [result, setResult] = useState()
   let variable;
   const title = { title: 'Add variable POST' };
-  const Rtbody = {
-    tipoNave: 1,
-    nombre: "LaNave",
-    peso: 200,
-    altura: 100,
-    combustible: 2.0,
-    mision: "Explorar Marte",
-    destino: "Marte",
-    paraInvestigacion:true
-  }
 
-  // make the backend accept a json of 3 jsons ... 
-  // now is the front sending 3 different requests
-
-  const postData = async (e) => {
-    //Prevents the refreshing 
-    console.log(Rtbody)
+  //Creación de nave tripulada
+  const postDataNaveTrip = async (e) => {
     e.preventDefault();
 
-    /*variable = {
-      rt: {
-        name: "rt",
-        dist: document.getElementById("Rt dist").value,
-        mu: document.getElementById("Rt mu").value,
-        sigma: document.getElementById("Rt sigma").value
-      },
+    variable = {
+      tipoNave: 1,
+      nombre: document.getElementById("NavTrip nombre").value,
+      peso: document.getElementById("NavTrip peso").value,
+      altura: document.getElementById("NavTrip altura").value,
+      combustible: document.getElementById("NavTrip combustible").value,
+      mision: document.getElementById("NavTrip mision").value,
+      capacidad: document.getElementById("NavTrip capacidad").value,
+      duracionMouth: document.getElementById("NavTrip duracionMonth").value,
+      duracionYear:document.getElementById("NavTrip duracionYear").value
 
-      phi: {
-        name: "phi",
-        dist: document.getElementById("phi dist").value,
-        mu: document.getElementById("phi mu").value,
-        sigma: document.getElementById("phi sigma").value
-      },
+    }
 
-      m: {
-        name: "m",
-        dist: document.getElementById("m dist").value,
-        mu: document.getElementById("m mu").value,
-        sigma: document.getElementById("m sigma").value
-      }
+    //console.log(variable)
 
-    }*/
-
-    console.log(variable)
-    console.log(Rtbody)
-    //Axios convert JSobject to JSON
     axios.post('http://localhost:8080/addnave',
-      Rtbody
+      variable
     ).then(res => {
       console.log(res.data);
     }
     ).catch(err => console.log(err))
-
-
-
   }
 
+  //Creación de nave no tripulada
+  const postDataNaveNoTrip = async (e) => {
+    e.preventDefault();
 
-  const setVariable = () => {
-    console.log(document.getElementById("Rt value").value);
     variable = {
-      rt: {
-        name: "rt",
-        dist: document.getElementById("Rt dist").value,
-        mu: document.getElementById("Rt mu").value,
-        sigma: document.getElementById("Rt sigma").value
-      },
-
-      phi: {
-        name: "phi",
-        dist: document.getElementById("phi dist").value,
-        mu: document.getElementById("phi mu").value,
-        sigma: document.getElementById("phi sigma").value
-      },
-
-      m: {
-        name: "m",
-        dist: document.getElementById("m dist").value,
-        mu: document.getElementById("m mu").value,
-        sigma: document.getElementById("m sigma").value
-      }
-
+      tipoNave: 2,
+      nombre: document.getElementById("NavNoTrip nombre").value,
+      peso: document.getElementById("NavNoTrip peso").value,
+      altura: document.getElementById("NavNoTrip altura").value,
+      combustible: document.getElementById("NavNoTrip combustible").value,
+      mision: document.getElementById("NavNoTrip mision").value,
+      destino: document.getElementById("NavNoTrip destino").value,
+      paraInvestigacion: document.getElementById("NavNoTrip invest").value
     }
 
+    //console.log(variable)
+    //Axios convert JSobject to JSON
+    axios.post('http://localhost:8080/addnave',
+      variable
+    ).then(res => {
+      console.log(res.data);
+    }
+    ).catch(err => console.log(err))
   }
 
+    //Creación de nave lanzadora
+    const postDataNaveLanz = async (e) => {
+      e.preventDefault();
+  
+      variable = {
+        tipoNave: 3,
+        nombre: document.getElementById("NavLanz nombre").value,
+        peso: document.getElementById("NavLanz peso").value,
+        altura: document.getElementById("NavLanz altura").value,
+        combustible: document.getElementById("NavLanz combustible").value,
+        mision: document.getElementById("NavLanz mision").value,
+        carga: document.getElementById("NavLanz carga").value,
+        empuje: document.getElementById("NavLanz empuje").value,
+        potencia:document.getElementById("NavLanz potencia").value,
+        reuttilizable:document.getElementById("NavLanz reusable").value
+      }
+  
+      //console.log(variable)
+      //Axios convert JSobject to JSON
+      axios.post('http://localhost:8080/addnave',
+        variable
+      ).then(res => {
+        console.log(res.data);
+      }
+      ).catch(err => console.log(err))
+    }
 
   return (
     <div className="mainPage">
@@ -107,62 +100,62 @@ function NavesSofka() {
               Nave Lanzadora</label>
             <input
               className='value'
-              id='Rt mu'
+              id='NavLanz nombre'
               placeholder='Nombre'
             //onChange={(e) => setPassword(e.target.value)}
             />
             <input
               className='value'
-              id='Rt mu'
+              id='NavLanz peso'
               placeholder='Peso'
             //onChange={(e) => setPassword(e.target.value)}
             />
             <input
               className='value'
-              id='Rt mu'
+              id='NavLanz altura'
               placeholder='Altura'
             //onChange={(e) => setPassword(e.target.value)}
             />
             <input
               className='value'
-              id='Rt mu'
+              id='NavLanz combustible'
               placeholder='Combustible'
             //onChange={(e) => setPassword(e.target.value)}
             />
             <input
               className='value'
-              id='Rt mu'
+              id='NavLanz mision'
               placeholder='Misión'
             //onChange={(e) => setPassword(e.target.value)}
             />
             <input
               className='value'
-              id='Rt mu'
+              id='NavLanz carga'
               placeholder='Carga'
             //onChange={(e) => setPassword(e.target.value)}
             />
             <input
               className='value'
-              id='Rt mu'
+              id='NavLanz empuje'
               placeholder='Empuje'
             //onChange={(e) => setPassword(e.target.value)}
             />
             <input
               className='value'
-              id='Rt mu'
+              id='NavLanz potencia'
               placeholder='Potencia'
             //onChange={(e) => setPassword(e.target.value)}
             />
             <select className='value'
-              id='phi dist'>
+              id='NavLanz reusable'>
               <option value="select">Seleccione reusabilidad</option>
-              <option value="True">Reutilizable</option>
-              <option value="False">No reutilizable</option>
+              <option value="true">Reutilizable</option>
+              <option value="false">No reutilizable</option>
             </select>
             <button className='userInputForm-but'
               id='submitButton'
               type="submit"
-              onClick={postData}>
+              onClick={postDataNaveLanz}>
               Submit
             </button>
 
@@ -174,56 +167,56 @@ function NavesSofka() {
               Nave Tripulada</label>
             <input
               className='value'
-              id='Rt mu'
+              id='NavTrip nombre'
               placeholder='Nombre'
             //onChange={(e) => setPassword(e.target.value)}
             />
             <input
               className='value'
-              id='Rt mu'
+              id='NavTrip peso'
               placeholder='Peso'
             //onChange={(e) => setPassword(e.target.value)}
             />
             <input
               className='value'
-              id='Rt mu'
+              id='NavTrip altura'
               placeholder='Altura'
             //onChange={(e) => setPassword(e.target.value)}
             />
             <input
               className='value'
-              id='Rt mu'
+              id='NavTrip combustible'
               placeholder='Combustible'
             //onChange={(e) => setPassword(e.target.value)}
             />
             <input
               className='value'
-              id='Rt mu'
+              id='NavTrip mision'
               placeholder='Misión'
             //onChange={(e) => setPassword(e.target.value)}
             />
             <input
               className='value'
-              id='Rt mu'
+              id='NavTrip capacidad'
               placeholder='Capacidad'
             //onChange={(e) => setPassword(e.target.value)}
             />
             <input
               className='value'
-              id='Rt mu'
+              id='NavTrip duracionMonth'
               placeholder='Duración meses'
             //onChange={(e) => setPassword(e.target.value)}
             />
             <input
               className='value'
-              id='Rt mu'
+              id='NavTrip duracionYear'
               placeholder='Duración años'
             //onChange={(e) => setPassword(e.target.value)}
             />
             <button className='userInputForm-but'
               id='submitButton'
               type="submit"
-              onClick={postData}>
+              onClick={postDataNaveTrip}>
               Submit
             </button>
           </div>
@@ -233,51 +226,51 @@ function NavesSofka() {
               Nave no tripulada</label>
             <input
               className='value'
-              id='Rt mu'
+              id='NavNoTrip nombre'
               placeholder='Nombre'
             //onChange={(e) => setPassword(e.target.value)}
             />
             <input
               className='value'
-              id='Rt mu'
+              id='NavNoTrip peso'
               placeholder='Peso'
             //onChange={(e) => setPassword(e.target.value)}
             />
             <input
               className='value'
-              id='Rt mu'
+              id='NavNoTrip altura'
               placeholder='Altura'
             //onChange={(e) => setPassword(e.target.value)}
             />
             <input
               className='value'
-              id='Rt mu'
+              id='NavNoTrip combustible'
               placeholder='Combustible'
             //onChange={(e) => setPassword(e.target.value)}
             />
             <input
               className='value'
-              id='Rt mu'
+              id='NavNoTrip mision'
               placeholder='Misión'
             //onChange={(e) => setPassword(e.target.value)}
             />
             <input
               className='value'
-              id='Rt mu'
+              id='NavNoTrip destino'
               placeholder='Destino'
             //onChange={(e) => setPassword(e.target.value)}
             />
             <select className='value'
-              id='phi dist'>
+              id='NavNoTrip invest'>
               <option value="select">Seleccione objetivo</option>
-              <option value="True">Investigación</option>
-              <option value="False">Otros</option>
+              <option value="true">Investigación</option>
+              <option value="false">Otros</option>
             </select>
 
             <button className='userInputForm-but'
               id='submitButton'
               type="submit"
-              onClick={postData}>
+              onClick={postDataNaveNoTrip}>
               Submit
             </button>
 

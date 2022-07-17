@@ -1,6 +1,6 @@
 {
-  "homepage": "http://JulianGeo.github.io/MonteCarloFront",
-  "name": "monte_carlo_front",
+  "homepage": "http://JulianGeo.github.io/SofkaNavesFront",
+  "name": "sofka_naves_front",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
