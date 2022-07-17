@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/SofkaNavesFront/static/css/main.24c1af82.css",
+    "main.js": "/SofkaNavesFront/static/js/main.abdbc2fb.js",
+    "index.html": "/SofkaNavesFront/index.html",
+    "main.24c1af82.css.map": "/SofkaNavesFront/static/css/main.24c1af82.css.map",
+    "main.abdbc2fb.js.map": "/SofkaNavesFront/static/js/main.abdbc2fb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.24c1af82.css",
+    "static/js/main.abdbc2fb.js"
+  ]
+}
