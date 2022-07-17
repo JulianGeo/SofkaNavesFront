@@ -68,12 +68,21 @@
     margin-bottom: 15px;    
 }
 
+#getButton{
+    width: 50%;
+    height: 30px;
+    border-radius: 5px;
+    font-size: var(--font-sm);
+    cursor: pointer;
+    padding: 3px;
+    margin-bottom: 15px;    
+}
+
 .results-container{
     display: grid;
     grid-template-rows: auto 1fr auto;
-    width: 300px;
-    height:230px;
-    background-color: #d0d0d5;
+    width: 700px;
+    height:700px;
     padding: 25px;
     margin: 10px;
     border-radius: 25px;
@@ -81,8 +90,28 @@
 
 .results-container .results .value{
     font-size: var(--font-sm);
+
 }
 
 #variables-form{
     margin: 15px;
 }
+
+tr:nth-child(even) {background-color: #82c2ecf6;}
+tr:hover {background-color: rgb(71, 181, 245);}
+th,td {
+    border-width: 5px;
+    word-wrap: break-word;
+}
+
+#table{
+    text-align: center;
+    justify-content: center;
+    margin-bottom:90% ;
+    table-layout:fixed;
+
+
+}
+
+
+

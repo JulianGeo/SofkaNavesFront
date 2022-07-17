@@ -1,6 +1,5 @@
-import logo from './images/Dice.png';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import NavesSofka from './components/NavesSofka';
 import About from './components/About';
 import ErrorPage from './components/ErrorPage';
@@ -20,7 +19,7 @@ function App() {
         <Route path="/" element={<NavesSofka/>} />
         <Route path="/about" element={<About/>} />
         <Route path="/NavesSofka" element={<NavesSofka/>} />
-       <Route path="*" element={<NavesSofka/>}/>
+       <Route path="*" element={<ErrorPage/>}/>
       </Routes>
     </Router>
   );
