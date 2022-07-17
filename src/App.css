@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  color: black;
+  background-color: rgb(119, 155, 209);
+  font-family: Lato, sans-serif;
+  
+}
+
+.main-nav{
+  display: flex;
+  width: 100%;
+
+  
+}
+
+.main-nav ul{
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+.app {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container{
+  width: 100%;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.montecarlo-logo{
+  width: 150px;
+
+
+}

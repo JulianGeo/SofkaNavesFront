@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    /*1rem=16px*/
+    --font-sm: 1rem;
+    --font-md: 1.2rem;
+    --font-lg: 1.4rem;
+}
+
+*{
+    
+    font-family: 'Nunito', sans-serif;
+}
+
+.mainPage{
+    display:flex;
+}
+
+.form-container{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 700px;
+    min-height:250px;
+    background-color: #d0d0d5;
+    padding: 25px;
+    margin: 10px;
+    border-radius: 25px;
+}
+
+.form-container .form{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.form-container .title{
+    text-align: center;
+    margin-bottom: 12px;
+    
+}
+
+.form-container .form .variable .label{
+    width: 100%;
+    font-size: var(--font-md);
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 4px;
+}
+
+.form-container .form .variable .value{
+    border:none;
+    border-radius: 8px;
+    font-size: var(--font-sm);
+    height: 28px;
+    display: flex;
+    cursor:text;
+    padding: 4px;
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+#submitButton{
+    
+    border-radius: 5px;
+    font-size: var(--font-sm);
+    cursor: pointer;
+    padding: 3px;
+    margin-bottom: 15px;    
+}
+
+.results-container{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 300px;
+    height:230px;
+    background-color: #d0d0d5;
+    padding: 25px;
+    margin: 10px;
+    border-radius: 25px;
+}
+
+.results-container .results .value{
+    font-size: var(--font-sm);
+}
+
+#variables-form{
+    margin: 15px;
+}
