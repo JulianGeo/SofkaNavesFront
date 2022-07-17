@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/SofkaNavesFront/static/css/main.24c1af82.css",
-    "main.js": "/SofkaNavesFront/static/js/main.abdbc2fb.js",
+    "main.css": "/SofkaNavesFront/static/css/main.c64f0f7a.css",
+    "main.js": "/SofkaNavesFront/static/js/main.72fd3a1d.js",
     "index.html": "/SofkaNavesFront/index.html",
-    "main.24c1af82.css.map": "/SofkaNavesFront/static/css/main.24c1af82.css.map",
-    "main.abdbc2fb.js.map": "/SofkaNavesFront/static/js/main.abdbc2fb.js.map"
+    "main.c64f0f7a.css.map": "/SofkaNavesFront/static/css/main.c64f0f7a.css.map",
+    "main.72fd3a1d.js.map": "/SofkaNavesFront/static/js/main.72fd3a1d.js.map"
   },
   "entrypoints": [
-    "static/css/main.24c1af82.css",
-    "static/js/main.abdbc2fb.js"
+    "static/css/main.c64f0f7a.css",
+    "static/js/main.72fd3a1d.js"
   ]
 }
